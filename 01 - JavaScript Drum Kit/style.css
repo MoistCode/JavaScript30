@@ -1,6 +1,5 @@
 html {
   font-size: 10px;
-  background: url('https://i.imgur.com/b9r5sEL.jpg') bottom center;
   background-size: cover;
 }
 
@@ -48,4 +47,21 @@ kbd {
   text-transform: uppercase;
   letter-spacing: .1rem;
   color: #ffc600;
+}
+
+.animate {
+  animation: bounce 1s 3, expand 2s 3;
+}
+
+@keyframes bounce {
+  0%       { margin-bottom:5px; }
+  25%, 75% { margin-bottom:50px; }
+  50%      { margin-bottom:100px; }
+  100%     { margin-bottom:0; }
+}
+
+@keyframes expand {
+  0%        { transform: scale(1.0) }
+  50%       { transform: scale(2.0) }
+  100%      { transform: scale(1.0) }
 }
