@@ -57,6 +57,22 @@
     input {
       width: 100px;
     }
+
+    .spin {
+      animation-name: spin;
+      animation-duration: 5000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear; 
+    }
+
+    @keyframes spin {
+      from {
+          transform:rotate(0deg);
+      }
+      to {
+          transform:rotate(360deg);
+      }
+  }
   </style>
 
   <script>
@@ -68,7 +84,7 @@
     }
 
     inputs.forEach(input => input.addEventListener('change', handleUpdate));
-    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+    inputs.forEach(input => input.addEventListener('mouseover', handleUpdate));
   </script>
 
 
